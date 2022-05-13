@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex wrap</title>
+
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .flex-container {
+            height: max-content;
+            width: calc(100% - 30rem);
+
+            margin: 1rem;
+
+            display: flex;
+
+            color: lime;
+
+            border: 1px solid black;
+        }
+
+        .item {
+            height: max-content;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1rem;
+            
+            font-size: 2em;
+        }
+
+        .no-wrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h1>no wrap</h1>
+
+    <div class="flex-container no-wrap">
+        <div class="item red">Item 1</div>
+        <div class="item blue">Item 2</div>
+        <div class="item yellow">Item 3</div>
+    </div>
+
+    <h1>wrap</h1>
+
+    <div class="flex-container wrap">
+        <div class="item red">Item 1</div>
+        <div class="item blue">Item 2</div>
+        <div class="item yellow">Item 3</div>
+    </div>
+
+    <h1>wrap-reverse</h1>
+
+    <div class="flex-container wrap-reverse">
+        <div class="item red">Item 1</div>
+        <div class="item blue">Item 2</div>
+        <div class="item yellow">Item 3</div>
+    </div>
+
+</body>
+</html>
