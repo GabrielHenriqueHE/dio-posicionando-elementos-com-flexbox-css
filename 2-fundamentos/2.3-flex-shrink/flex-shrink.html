@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex-shrink</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            width: 350px;
+            
+            margin: .2rem;
+            
+            display: flex;
+
+            border: 1px solid black;
+
+            text-align: center;
+        }
+        
+        .item {
+            margin: 5px;
+            
+            background-color: blueviolet;
+            color: white;
+            
+            font-size: 24px;
+        }
+
+        .fs-1 {
+            flex-shrink: 1;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+
+        .fb-1 {
+            flex-basis: 300px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <p>flex-shrink: 1</p>
+    <div class="container">
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">B</div>
+        <div class="item fs-1 fg-1">C</div>
+        <div class="item fs-1 fg-1">D</div>
+        <div class="item fs-1 fg-1">E</div>
+    </div>
+
+    <div class="container">
+        <div class="item fs-1 fb-1 fg-1">A</div>
+        <div class="item fs-1 fb-1 fg-1">Lorem ipsum dolor sit.</div>
+        <div class="item fs-1 fb-1 fg-1">C</div>
+        <div class="item fs-1 fb-1 fg-1">D</div>
+        <div class="item fs-1 fb-1 fg-1">E</div>
+    </div>
+
+</body>
+</html>

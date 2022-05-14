@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos: align-self</title>
+
+    <style>
+        .container {
+            max-width: 350px;
+            height: 400px;
+
+            margin: .2rem;
+            
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            border: 1px solid black;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .item {
+            margin: 5px;
+            
+            background-color: blueviolet;
+            color: white;
+
+            font-size: 3em;
+            text-align: center;
+        }
+        
+        .center {
+            align-self: center;
+        }
+
+        .flex-start {
+            align-self: flex-start;
+        }
+
+        .flex-end {
+            align-self: flex-end;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h1>row</h1>
+    <div class="container">
+        <div class="item flex-start">1</div>
+        <div class="item flex-end">2</div>
+        <div class="item stretch">3</div>
+        <div class="item baseline">4</div>
+        <div class="item center">5</div>
+    </div>
+
+    <h1>column</h1>
+    <div class="container column">
+        <div class="item flex-start">1</div>
+        <div class="item flex-end">2</div>
+        <div class="item stretch">3</div>
+        <div class="item baseline">4</div>
+        <div class="item center">5</div>
+    </div>
+
+</body>
+</html>
